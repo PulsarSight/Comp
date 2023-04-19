@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Screen</title>
+   
+    <style>
+        /* background*/
+        body {
+            background-color: #09516e;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+         
+        }
+        
+        /* Style for the buttons */
+        .button {
+            display: block;
+            padding: 20px;
+            margin: 10px;
+            font-size: 24px;
+            text-align: center;
+            background-color: white;
+            color: #87CEEB;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+        }
+        
+        /* Style for button hover effect */
+        .button:hover {
+            background-color: #87CEEB;
+            color: rgb(11, 7, 243);
+        }
+
+        /* Style for the header */
+        header {
+            display: flex;
+            justify-content: top;
+            align-items: top;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the header text */
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-transform: uppercase;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="popup" id="popup">
+           
+            <h2> welcome player</h2>
+            <p> The purpose of the game is to find where your opoment is hiding. With your clues(the clue being a big red circle that will show you the area of which the opement is hiding) and intuition you will select a section of the map and check for the opemment. Make sure to find the player before your 5 minutes are up though, or you LOSE!
+       For the hiders, all you have to do is select a section on the map to hide, and pray that the seeker doesn't find you.</p>
+            <button type="button" onclick="closePopup()"> Ok</button>
+        </div>
+    </div>
+    <header><h1>Hide And Seek</h1></header>
+    <div class="container">
+        <!-- Button for Instructions -->
+        <button onclick = "openPopup()" type="button" class="button">Instructions</button>
+    
+        <!-- Button for Single Player -->
+        <button onclick="location.href='index3.html'" class="button">Single Player</button>
+        
+        <!-- Button for Multiplayer -->
+       <button onclick="location.href='index2.html'" type="button" class="button">Multiplayer</button>
+
+       
+    </div>
+    <div>
+        <script>
+            let popup = document.getElementById('popup');
+            function openPopup() {
+                popup.classList.add("open-popup");
+            }
+            function closePopup() {
+                popup.classList.remove("open-popup");
+            }
+        </script>
+    </div>
+</body>
+</html>
